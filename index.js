@@ -90,3 +90,5 @@ function removeLocalStorage(item) {
   localStorage.setItem("todo", JSON.stringify(todo_list));
   console.log(localStorage.getItem("todo"));
 }
+
+//fkfkfkfkfkfk
