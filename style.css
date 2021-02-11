@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
+
 html,
 body,
 div,
@@ -102,6 +104,7 @@ section {
 }
 body {
   line-height: 1;
+  font-family: "Yeon Sung", cursive;
 }
 ol,
 ul {
@@ -119,14 +122,82 @@ q:after {
   content: none;
 }
 
-.domdiv {
-  max-width: 70vw;
-  margin: 3rem auto 0;
+.content {
+  height: 100vh;
+  display: flex;
+  background-color: rgb(196, 196, 196);
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
 }
 
-#domul {
-  position: relative;
+.domdiv {
+  min-width: 70%;
+  height: 80vh;
+  margin: 0 auto;
+  background-color: white;
   font-size: 1.5rem;
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  overflow: auto;
+  padding: 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.domdiv h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.9rem;
+}
+
+.inputBtn {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.inputBtn input {
+  font-family: "Yeon Sung", cursive;
+  width: 15rem;
+  font-size: 1rem;
+  margin-right: 1.2rem;
+  padding: 7px 10px;
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid rgb(102, 102, 102);
+  letter-spacing: 2px;
+}
+.inputBtn input:focus {
+  outline: none;
+}
+
+.inputBtn button {
+  border: none;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.inputBtn button:hover {
+  background: rgb(196, 196, 196);
+  color: white;
+  font-weight: 700;
+}
+
+.domul {
+  min-height: 70vh;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  overflow: auto;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .todo-list {
@@ -135,6 +206,21 @@ q:after {
   justify-content: space-between;
   padding: 1rem;
   transition: all 0.85s ease;
+  background-color: rgb(196, 196, 196);
+  border-radius: 8px;
+  margin-bottom: 3px;
+}
+
+.removeBtn {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 0.2rem 0.3rem;
+}
+
+.removeBtn:hover {
+  transform: scale(1.2);
 }
 
 .todo-list .removeBtn i {
@@ -143,6 +229,29 @@ q:after {
 
 #domul .removing {
   transform: translateX(-110%);
+}
+
+.todo-list label input {
+  display: none;
+}
+
+.todo-list label::before {
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 14px;
+  background: white;
+  border: 1px solid black;
+  vertical-align: middle;
+  margin-right: 0.42em;
+  cursor: pointer;
+  padding-left: 3px;
+  padding-bottom: 2px;
+}
+
+.todo-list .c::before {
+  content: "\2713";
+  font-size: 1.4rem;
 }
 
 .todo-list li {
